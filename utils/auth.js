@@ -1,20 +1,18 @@
 import http from 'k6/http';
-import { check } from 'k6';
 
-export function login(email, password) {
-  const payload = JSON.stringify({ email, password });
-
-  const res = http.post('https://your-api.com/api/v2/auth/login', payload, {
-    headers: { 'Content-Type': 'application/json' },
+export function getToken(email, password) {
+  const url = `${__ENV.BASE_URL}/api/v2/auth/login`;
+  const payload = JSON.stringify({
+    email,
+    password
   });
 
-  check(res, {
-    'login success': (r) => r.status === 200,
-  });
+  const params = { headers: { 'Content-Type': 'application/json' } };
+  const res = http.post(url, payload, params);
 
-  const responseBody = JSON.parse(res.body);
-  return {
-    accessToken: responseBody.accessToken,
-    refreshToken: responseBody.refreshToken,
-  };
+  if (res.status === 200) {
+    return JSON.parse(res.body).accessToken;
+  }
+
+  throw new Error(`로그인 실패: ${res.status} ${res.body}`);
 }

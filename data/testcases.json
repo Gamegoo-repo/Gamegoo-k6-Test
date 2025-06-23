@@ -1,0 +1,9 @@
+[
+  {
+    "name": "login",
+    "endpoint": "/api/v2/auth/login",
+    "method": "POST",
+    "jwt": false,
+    "payloadFile" : "login.json"
+  }
+]

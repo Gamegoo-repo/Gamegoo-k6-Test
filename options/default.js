@@ -1,7 +1,8 @@
 export const options = {
-  vus: 10,
-  duration: '30s',
+  vus: __ENV.VUS ? parseInt(__ENV.VUS) : 10,
+  duration: __ENV.DURATION || '10s',
   thresholds: {
-    http_req_duration: ['p(95)<500'], // 95% of requests should complete below 500ms
+    http_req_duration: ['p(95)<500'],  // 95% 요청은 500ms 내
+    http_req_failed: ['rate<0.01'],    // 실패율 1% 미만
   },
 };
