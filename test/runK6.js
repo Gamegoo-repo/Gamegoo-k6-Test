@@ -18,6 +18,7 @@ const testcases = JSON.parse(fs.readFileSync(testcasesPath, 'utf-8'));
 const BASE_URL = process.env.BASE_URL || 'https://api.example.com';
 const VUS = process.env.VUS || '10';
 const DURATION = process.env.DURATION || '30s';
+const PAYLOAD_FILE = process.env.PAYLOAD_FILE;
 
 const resultsDir = path.resolve('./results');
 if (!fs.existsSync(resultsDir)) {
@@ -31,8 +32,7 @@ for (const tc of testcases) {
     method = 'GET',
     query = '',
     jwt = false,
-    payloadFolder = '',
-    payloadFile = '',
+    payloadFile = PAYLOAD_FILE,
   } = tc;
 
   const envVars = {
@@ -44,7 +44,7 @@ for (const tc of testcases) {
     METHOD: method,
     QUERY: query,
     JWT_REQUIRED: jwt.toString(),
-    PAYLOAD_FILE: 'login.json', //TODO: 테스트마다 여기 수정하기
+    PAYLOAD_FILE: payloadFile || '',
     K6_TLS_SKIP_VERIFY: 'true', 
   };
 
@@ -59,6 +59,8 @@ for (const tc of testcases) {
 
   const result = spawnSync('k6', [
     'run',
+    '--vus', VUS,
+    '--duration', DURATION,
     '--summary-export=results/summary.json',
     '-o', 'experimental-prometheus-rw',
     'test/mainTest.js'
