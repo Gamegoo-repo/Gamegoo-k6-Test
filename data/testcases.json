@@ -4,6 +4,13 @@
     "endpoint": "/api/v2/auth/login",
     "method": "POST",
     "jwt": false,
-    "payloadFile" : "login.json"
+    "payloadFile": "login.json"
+  },
+  {
+    "name": "profile",
+    "endpoint": "/api/v2/profile",
+    "method": "GET",
+    "jwt": true,
+    "payloadFile": "login.json"
   }
 ]

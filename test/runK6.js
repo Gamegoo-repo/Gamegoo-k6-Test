@@ -7,6 +7,10 @@ process.env.K6_TLS_SKIP_VERIFY = 'true';
 
 dotenv.config();
 
+// 커맨드라인 인자에서 --test=profile 같은 옵션 처리
+const testArg = process.argv.find(arg => arg.startsWith('--test='));
+const testName = testArg ? testArg.split('=')[1] : null;
+
 const testcasesPath = path.resolve('./data/testcases.json');
 if (!fs.existsSync(testcasesPath)) {
   console.error('❌ testcases.json 파일을 찾을 수 없습니다.');
@@ -26,6 +30,8 @@ if (!fs.existsSync(resultsDir)) {
 }
 
 for (const tc of testcases) {
+  if (testName && tc.name !== testName) continue; // 지정된 테스트만 실행
+
   const {
     name,
     endpoint,
