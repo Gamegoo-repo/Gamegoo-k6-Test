@@ -1,5 +1,6 @@
 [
   {
+    "active": "false",
     "name": "login",
     "endpoint": "/api/v2/auth/login",
     "method": "POST",
@@ -7,10 +8,18 @@
     "payloadFile": "login.json"
   },
   {
-    "name": "profile",
+    "active": "false",
+    "name": "내 프로필 조회",
     "endpoint": "/api/v2/profile",
     "method": "GET",
+    "jwt": true
+  },
+  {
+    "active": "true",
+    "name": "다른 사용자 프로필 조회",
+    "endpoint": "/api/v2/profile/other",
+    "method": "GET",
     "jwt": true,
-    "payloadFile": "login.json"
+    "payloadFile": "otherProfile.json"
   }
 ]

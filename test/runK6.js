@@ -7,10 +7,6 @@ process.env.K6_TLS_SKIP_VERIFY = 'true';
 
 dotenv.config();
 
-// 커맨드라인 인자에서 --test=profile 같은 옵션 처리
-const testArg = process.argv.find(arg => arg.startsWith('--test='));
-const testName = testArg ? testArg.split('=')[1] : null;
-
 const testcasesPath = path.resolve('./data/testcases.json');
 if (!fs.existsSync(testcasesPath)) {
   console.error('❌ testcases.json 파일을 찾을 수 없습니다.');
@@ -19,10 +15,9 @@ if (!fs.existsSync(testcasesPath)) {
 
 const testcases = JSON.parse(fs.readFileSync(testcasesPath, 'utf-8'));
 
-const BASE_URL = process.env.BASE_URL || 'https://api.example.com';
+const BASE_URL = process.env.BASE_URL || 'https://api.gamegoo.co.kr';
 const VUS = process.env.VUS || '10';
 const DURATION = process.env.DURATION || '30s';
-const PAYLOAD_FILE = process.env.PAYLOAD_FILE;
 
 const resultsDir = path.resolve('./results');
 if (!fs.existsSync(resultsDir)) {
@@ -30,17 +25,18 @@ if (!fs.existsSync(resultsDir)) {
 }
 
 for (const tc of testcases) {
-  if (testName && tc.name !== testName) continue; // 지정된 테스트만 실행
-
   const {
+    active,
     name,
     endpoint,
     method = 'GET',
     query = '',
     jwt = false,
-    payloadFile = PAYLOAD_FILE,
+    payloadFile,
   } = tc;
 
+  if (active !== "true") continue;
+  
   const envVars = {
     BASE_URL,
     VUS,
@@ -56,10 +52,6 @@ for (const tc of testcases) {
 
   console.log(`\n▶️ ${name} 테스트 실행 중...`);
   console.table(envVars);
-
-  if (!payloadFile) {
-    console.warn('⚠️ PAYLOAD_FILE is not defined. Please check testcases.json and ensure "payloadFile" is correctly set.');
-  }
 
   console.log('📦 Spawning k6 with environment variables:', envVars);
 

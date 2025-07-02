@@ -1,0 +1,12 @@
+{
+  "path": {
+    "matchingUuid": "abc123",
+    "targetMatchingUuid": "def456"
+  },
+  "query": {
+    "type": "fast"
+  },
+  "body": {
+    "message": "Let's go!"
+  }
+}
