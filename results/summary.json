@@ -1,623 +1,631 @@
 {
     "metrics": {
+        "data_received": {
+            "count": 1195576,
+            "rate": 35395.735882824854
+        },
+        "http_reqs": {
+            "count": 785,
+            "rate": 23.240390128287544
+        },
         "vus_max": {
             "value": 5,
             "min": 5,
             "max": 5
         },
+        "http_req_sending": {
+            "min": 0.004,
+            "med": 0.026,
+            "max": 1.807,
+            "p(90)": 0.03460000000000002,
+            "p(95)": 0.036,
+            "avg": 0.02842420382165598
+        },
+        "vus": {
+            "value": 2,
+            "min": 2,
+            "max": 5
+        },
+        "iterations": {
+            "count": 43,
+            "rate": 1.2730404783647955
+        },
+        "data_sent": {
+            "count": 241854,
+            "rate": 7160.230973359052
+        },
         "http_req_blocked": {
-            "max": 51.274,
+            "med": 0.007,
+            "max": 38.519,
             "p(90)": 0.01,
-            "p(95)": 0.011,
-            "avg": 0.2510251762336337,
-            "min": 0.001,
-            "med": 0.007
+            "p(95)": 0.01,
+            "avg": 0.20396305732483844,
+            "min": 0.001
+        },
+        "http_req_connecting": {
+            "med": 0,
+            "max": 7.962,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.055482802547770695,
+            "min": 0
         },
         "checks": {
-            "passes": 988,
+            "passes": 780,
             "fails": 0,
             "value": 1
         },
-        "http_req_sending": {
-            "p(95)": 0.037399999999999954,
-            "avg": 0.025030211480362465,
-            "min": 0.004,
-            "med": 0.024,
-            "max": 0.175,
-            "p(90)": 0.034
-        },
-        "http_req_connecting": {
-            "avg": 0.06843101711983887,
-            "min": 0,
-            "med": 0,
-            "max": 15.939,
-            "p(90)": 0,
-            "p(95)": 0
-        },
-        "iterations": {
-            "count": 52,
-            "rate": 1.302724322238882
-        },
-        "http_reqs": {
-            "count": 993,
-            "rate": 24.87702407660019
-        },
-        "http_req_tls_handshaking": {
-            "max": 39.968,
-            "p(90)": 0,
-            "p(95)": 0,
-            "avg": 0.17215911379657603,
-            "min": 0,
-            "med": 0
-        },
         "http_req_duration{expected_response:true}": {
-            "med": 107.28,
-            "max": 7993.048,
-            "p(90)": 128.6978,
-            "p(95)": 147.77559999999997,
-            "avg": 172.0273595166164,
-            "min": 83.394
+            "p(90)": 173.4468,
+            "p(95)": 213.6038,
+            "avg": 201.2842929936305,
+            "min": 90.843,
+            "med": 125.316,
+            "max": 9879.561
+        },
+        "http_req_waiting": {
+            "min": 90.743,
+            "med": 125.184,
+            "max": 9879.428,
+            "p(90)": 173.327,
+            "p(95)": 213.50119999999998,
+            "avg": 201.1512407643311
         },
         "http_req_failed": {
             "passes": 0,
-            "fails": 993,
+            "fails": 785,
             "value": 0
         },
-        "iteration_duration": {
-            "avg": 3283.7100320769237,
-            "min": 1884.589458,
-            "med": 2147.5238125,
-            "max": 10225.723958,
-            "p(90)": 9375.7134548,
-            "p(95)": 9715.69185465
-        },
-        "http_req_waiting": {
-            "avg": 171.89405337361524,
-            "min": 83.27,
-            "med": 107.163,
-            "max": 7992.918,
-            "p(90)": 128.552,
-            "p(95)": 147.47119999999998
-        },
         "http_req_receiving": {
-            "max": 0.823,
-            "p(90)": 0.154,
-            "p(95)": 0.16839999999999997,
-            "avg": 0.10827593152064457,
-            "min": 0.019,
-            "med": 0.103
+            "avg": 0.10462802547770701,
+            "min": 0.018,
+            "med": 0.101,
+            "max": 1.002,
+            "p(90)": 0.146,
+            "p(95)": 0.158
         },
-        "data_sent": {
-            "count": 305505,
-            "rate": 7653.630655107493
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 19.029,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.11916942675159235
         },
         "http_req_duration": {
-            "avg": 172.0273595166164,
-            "min": 83.394,
-            "med": 107.28,
-            "max": 7993.048,
-            "p(90)": 128.6978,
-            "p(95)": 147.77559999999997
+            "avg": 201.2842929936305,
+            "min": 90.843,
+            "med": 125.316,
+            "max": 9879.561,
+            "p(90)": 173.4468,
+            "p(95)": 213.6038
         },
-        "data_received": {
-            "count": 1508983,
-            "rate": 37803.63184509605
-        },
-        "vus": {
-            "value": 1,
-            "min": 1,
-            "max": 5
+        "iteration_duration": {
+            "avg": 3661.0334254651166,
+            "min": 1619.581292,
+            "med": 2115.101167,
+            "max": 13359.175417,
+            "p(90)": 9613.579066799999,
+            "p(95)": 10207.113571099999
         }
     },
     "setup_data": {
-        "payloadChunks": [
-            [
-                {
-                    "query": {
-                        "id": "6"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "7"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "8"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "9"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "10"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "11"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "12"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "13"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "14"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "15"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "16"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "17"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "18"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "19"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "20"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "21"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "22"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "23"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "24"
-                    }
-                }
-            ],
-            [
-                {
-                    "query": {
-                        "id": "25"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "26"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "27"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "28"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "29"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "30"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "31"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "32"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "33"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "34"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "35"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "36"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "37"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "38"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "39"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "40"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "41"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "42"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "43"
-                    }
-                }
-            ],
-            [
-                {
-                    "query": {
-                        "id": "44"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "45"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "46"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "47"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "48"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "49"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "50"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "51"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "52"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "53"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "54"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "55"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "56"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "57"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "58"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "59"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "60"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "61"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "62"
-                    }
-                }
-            ],
-            [
-                {
-                    "query": {
-                        "id": "63"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "64"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "65"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "66"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "67"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "68"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "69"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "70"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "71"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "72"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "73"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "74"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "75"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "76"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "77"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "78"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "79"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "80"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "81"
-                    }
-                }
-            ],
-            [
-                {
-                    "query": {
-                        "id": "82"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "83"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "84"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "85"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "86"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "87"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "88"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "89"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "90"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "91"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "92"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "93"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "94"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "95"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "96"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "97"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "98"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "99"
-                    }
-                },
-                {
-                    "query": {
-                        "id": "100"
-                    }
-                }
-            ]
-        ],
-        "tokens": [
-            "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MSwiaWF0IjoxNzUxNDcxMDY2LCJleHAiOjE3NTE0NzE2NjZ9.lFXOFFhuJ5R7w3a_h1QN54GACbX722mn0R0DJhj2dIM",
-            "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MiwiaWF0IjoxNzUxNDcxMDY2LCJleHAiOjE3NTE0NzE2NjZ9.2fgxvdsD7222cyF1_nY8aOuirDx_HHQ70jRws7eI71w",
-            "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MywiaWF0IjoxNzUxNDcxMDY2LCJleHAiOjE3NTE0NzE2NjZ9.oBf2UezZIvP8g0ApnKb5wpSdpxuNWhZNUSCTsUQ6DHo",
-            "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6NCwiaWF0IjoxNzUxNDcxMDY2LCJleHAiOjE3NTE0NzE2NjZ9.ML0E2goPUfzTaa8Z5cXXZyADVM7w-Qt-gZUWxzm_D64",
-            "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6NSwiaWF0IjoxNzUxNDcxMDY3LCJleHAiOjE3NTE0NzE2Njd9.VgHnsc0xJXIJawKQRi14kiaAxx6K_-GKK1-y210dhxs"
+        "vuData": [
+            {
+                "payloads": [
+                    {
+                        "query": {
+                            "id": "6"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "7"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "8"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "9"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "10"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "11"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "12"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "13"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "14"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "15"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "16"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "17"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "18"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "19"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "20"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "21"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "22"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "23"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "24"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "25"
+                        }
+                    }
+                ],
+                "token": "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MSwiaWF0IjoxNzUxNTQxNDAzLCJleHAiOjE3NTE1NDIwMDN9.CNbMR6EBoCzHRxhjMlS1ilHbjfwbJlvWojZ_4wva76A"
+            },
+            {
+                "payloads": [
+                    {
+                        "query": {
+                            "id": "26"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "27"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "28"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "29"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "30"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "31"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "32"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "33"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "34"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "35"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "36"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "37"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "38"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "39"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "40"
+                        }
+                    }
+                ],
+                "token": "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MiwiaWF0IjoxNzUxNTQxNDAzLCJleHAiOjE3NTE1NDIwMDN9.caJhpWWe3cY_uPjdy3uQ0Sr9RBtZZkU-1zNrE_4_w7U"
+            },
+            {
+                "payloads": [
+                    {
+                        "query": {
+                            "id": "41"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "42"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "43"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "44"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "45"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "46"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "47"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "48"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "49"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "50"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "51"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "52"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "53"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "54"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "55"
+                        }
+                    }
+                ],
+                "token": "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6MywiaWF0IjoxNzUxNTQxNDAzLCJleHAiOjE3NTE1NDIwMDN9.kKVxOnaVZmOhRFekFik1KVrA-_P-1ohArBKKoC08-ps"
+            },
+            {
+                "payloads": [
+                    {
+                        "query": {
+                            "id": "56"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "57"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "58"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "59"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "60"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "61"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "62"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "63"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "64"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "65"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "66"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "67"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "68"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "69"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "70"
+                        }
+                    }
+                ],
+                "token": "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6NCwiaWF0IjoxNzUxNTQxNDA0LCJleHAiOjE3NTE1NDIwMDR9.K1w4-_uvxQUCB_JCM2wy3NqXBU9WKBL_pRSj_DBdOnM"
+            },
+            {
+                "token": "eyJhbGciOiJIUzI1NiJ9.eyJtZW1iZXJJZCI6NSwiaWF0IjoxNzUxNTQxNDA0LCJleHAiOjE3NTE1NDIwMDR9.DCzCEbjthyK5P0g6pQIqIQg-IXwxiD5m3X--lyU6d4Q",
+                "payloads": [
+                    {
+                        "query": {
+                            "id": "71"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "72"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "73"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "74"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "75"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "76"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "77"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "78"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "79"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "80"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "81"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "82"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "83"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "84"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "85"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "86"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "87"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "88"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "89"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "90"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "91"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "92"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "93"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "94"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "95"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "96"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "97"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "98"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "99"
+                        }
+                    },
+                    {
+                        "query": {
+                            "id": "100"
+                        }
+                    }
+                ]
+            }
         ]
     },
     "root_group": {
+        "name": "",
         "path": "",
         "id": "d41d8cd98f00b204e9800998ecf8427e",
         "groups": {},
         "checks": {
                 "status is 200": {
+                    "name": "status is 200",
                     "path": "::status is 200",
                     "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
-                    "passes": 988,
-                    "fails": 0,
-                    "name": "status is 200"
+                    "passes": 780,
+                    "fails": 0
                 }
-            },
-        "name": ""
+            }
     }
 }
