@@ -1,6 +1,9 @@
 import http from 'k6/http';
 import { check } from 'k6';
 import { getToken } from '../utils/auth.js';
+import { options } from '../options/scenario-rps.js';
+export { options };
+
 import exec from 'k6/execution';
 
 const BASE_URL = __ENV.BASE_URL;

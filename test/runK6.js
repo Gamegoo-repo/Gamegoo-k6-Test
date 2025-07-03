@@ -36,7 +36,7 @@ for (const tc of testcases) {
   } = tc;
 
   if (active !== "true") continue;
-  
+
   const envVars = {
     BASE_URL,
     VUS,
@@ -47,7 +47,7 @@ for (const tc of testcases) {
     QUERY: query,
     JWT_REQUIRED: jwt.toString(),
     PAYLOAD_FILE: payloadFile || '',
-    K6_TLS_SKIP_VERIFY: 'true', 
+    K6_TLS_SKIP_VERIFY: 'true',
   };
 
   console.log(`\n▶️ ${name} 테스트 실행 중...`);
@@ -57,8 +57,6 @@ for (const tc of testcases) {
 
   const result = spawnSync('k6', [
     'run',
-    '--vus', VUS,
-    '--duration', DURATION,
     '--summary-export=results/summary.json',
     '-o', 'experimental-prometheus-rw',
     'test/mainTest.js'
