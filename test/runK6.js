@@ -40,7 +40,7 @@ for (const tc of testcases) {
     METHOD: method,
     QUERY: query,
     JWT_REQUIRED: jwt.toString(),
-    PAYLOAD_FILE: payloadFile || "",
+    PAYLOAD_FILE: payloadFile || "default.json",
     K6_TLS_SKIP_VERIFY: "true",
     K6_PROMETHEUS_RW_SERVER_URL: K6_PROMETHEUS_RW_SERVER_URL || "http://localhost:9090/api/v1/write",
     K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM: "true",

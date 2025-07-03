@@ -55,23 +55,27 @@ export default function (accounts) {
   const account = accounts[vuId % accounts.length];
   const token = account.token;
   const payloads = account.payloads; // 해당 vUser의 모든 payload 리스트
-  const payload = payloads[iter % payloads.length]; // 현재 default()실행에서 보낼 단 하나의 payload
 
   // 요청 생성
   let url = `${BASE_URL}${ENDPOINT}`;
-  const { path = {}, query = {}, body = {} } = payload;
 
-  // path 변환
-  Object.entries(path).forEach(([key, value]) => {
-    const regex = new RegExp(`{${key}}`);
-    url = url.replace(regex, encodeURIComponent(value));
-  });
+  if (payloads.length > 0) {
+    const payload = payloads[iter % payloads.length]; // 현재 default()실행에서 보낼 단 하나의 payload
 
-  // query 문자열 구성
-  const queryStr = Object.entries(query)
-    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
-    .join("&");
-  if (queryStr) url += `?${queryStr}`;
+    const { path = {}, query = {}, body = {} } = payload;
+
+    // path 변환
+    Object.entries(path).forEach(([key, value]) => {
+      const regex = new RegExp(`{${key}}`);
+      url = url.replace(regex, encodeURIComponent(value));
+    });
+
+    // query 문자열 구성
+    const queryStr = Object.entries(query)
+      .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+      .join("&");
+    if (queryStr) url += `?${queryStr}`;
+  }
 
   const headers = {
     "Content-Type": "application/json",

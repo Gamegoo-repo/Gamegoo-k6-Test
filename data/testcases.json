@@ -12,7 +12,7 @@
     "maxVUs": 10
   },
   {
-    "active": "false",
+    "active": "true",
     "name": "내 프로필 조회",
     "endpoint": "/api/v2/profile",
     "method": "GET",
@@ -20,7 +20,7 @@
     "rate": 5,
     "duration": "10s",
     "preAllocatedVUs": 5,
-    "maxVUs": 10
+    "maxVUs": 5
   },
   {
     "active": "true",
@@ -29,8 +29,8 @@
     "method": "GET",
     "jwt": true,
     "payloadFile": "otherProfile.json",
-    "rate": 5,
-    "duration": "10s",
+    "rate": 20,
+    "duration": "15s",
     "preAllocatedVUs": 5,
     "maxVUs": 10
   }
