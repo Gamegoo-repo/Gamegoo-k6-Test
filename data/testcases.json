@@ -5,14 +5,22 @@
     "endpoint": "/api/v2/auth/login",
     "method": "POST",
     "jwt": false,
-    "payloadFile": "login.json"
+    "payloadFile": "login.json",
+    "rate": 5,
+    "duration": "10s",
+    "preAllocatedVUs": 5,
+    "maxVUs": 10
   },
   {
     "active": "false",
     "name": "내 프로필 조회",
     "endpoint": "/api/v2/profile",
     "method": "GET",
-    "jwt": true
+    "jwt": true,
+    "rate": 5,
+    "duration": "10s",
+    "preAllocatedVUs": 5,
+    "maxVUs": 10
   },
   {
     "active": "true",
@@ -20,6 +28,10 @@
     "endpoint": "/api/v2/profile/other",
     "method": "GET",
     "jwt": true,
-    "payloadFile": "otherProfile.json"
+    "payloadFile": "otherProfile.json",
+    "rate": 5,
+    "duration": "10s",
+    "preAllocatedVUs": 5,
+    "maxVUs": 10
   }
 ]
