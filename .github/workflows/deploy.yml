@@ -27,11 +27,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cat <<EOF > /home/ubuntu/Gamegoo-k6-Test/.env
-BASE_URL=${{ secrets.BASE_URL }}
-K6_PROMETHEUS_RW_SERVER_URL=${{ secrets.K6_PROMETHEUS_RW_SERVER_URL }}
-SUMMARY_API_URL=${{ secrets.SUMMARY_API_URL }}
-EOF
+            echo "BASE_URL=${{ secrets.BASE_URL }}" > /home/ubuntu/Gamegoo-k6-Test/.env
+            echo "K6_PROMETHEUS_RW_SERVER_URL=${{ secrets.K6_PROMETHEUS_RW_SERVER_URL }}" >> /home/ubuntu/Gamegoo-k6-Test/.env
+            echo "SUMMARY_API_URL=${{ secrets.SUMMARY_API_URL }}" >> /home/ubuntu/Gamegoo-k6-Test/.env
 
       - name: Run test script on EC2
         uses: appleboy/ssh-action@v1.0.0
