@@ -40,4 +40,4 @@ jobs:
           script: |
             cd /home/ubuntu/Gamegoo-k6-Test
             npm install
-            node test/runK6.js
+            nohup node test/runK6.js > run.log 2>&1 &
