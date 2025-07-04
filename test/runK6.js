@@ -27,7 +27,7 @@ if (!fs.existsSync(resultsDir)) {
 for (const tc of testcases) {
   const { active, name, endpoint, method = "GET", query = "", jwt = false, payloadFile, rate = 100, duration = "30s", preAllocatedVUs = 5, maxVUs = 10 } = tc;
 
-  if (active !== "true") continue;
+  if (!active) continue;
 
   const envVars = {
     BASE_URL,
