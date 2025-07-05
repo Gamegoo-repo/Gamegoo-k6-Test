@@ -96,6 +96,12 @@ export default function (accounts) {
   check(res, {
     "status is 200": (r) => r.status === 200,
   });
+
+  // 실패 응답 로깅
+  if (res.status >= 400) {
+    console.error(`❌ ${res.status} ${METHOD} ${url}`);
+    console.error(`User: ${account.email}`);
+  }
 }
 
 export function handleSummary(data) {
