@@ -585,5 +585,16 @@
     "duration": "20s",
     "preAllocatedVUs": 250,
     "maxVUs": 400
+  },
+  {
+    "active":false,
+    "endpoint": "/api/v2/profile/mike",
+    "method": "PUT",
+    "jwt": true,
+    "payloadFile": "setMikeUser_100vus.json",
+    "rate": 50,
+    "duration": "20s",
+    "preAllocatedVUs": 50,
+    "maxVUs": 100
   }
 ]

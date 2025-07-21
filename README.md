@@ -115,17 +115,35 @@ const payloadChunks = Array.from({ length: vus }, (_, i) => {
 
 ---
 
-## 🔐 JWT 발급 (자동 처리)
+## 🔐 JWT 발급 및 VUser별 Payload 지정 (자동 처리)
 
-- JWT가 필요한 테스트는 `jwt.json`에서 계정 정보를 불러와 로그인 후 토큰을 발급받습니다.
-- `setup()`에서 토큰을 전 VU에 미리 분배하여 재사용합니다.
+- `jwt.json`에는 각 VUser가 사용할 로그인 계정과 요청 payload를 함께 정의할 수 있습니다.
+- 각 계정은 고유한 email/password 조합과 해당 VUser만 사용할 payload 배열을 가질 수 있습니다.
+- `setup()` 함수에서 이 정보를 기반으로 로그인 및 payload 분배가 자동으로 이뤄집니다.
 
 ```json
 [
-  { "email": "user1@example.com", "password": "12345678" },
-  { "email": "user2@example.com", "password": "12345678" }
+  {
+    "email": "user1@example.com",
+    "password": "12345678",
+    "payloads": [
+      { "query": { "id": "1" } },
+      { "query": { "id": "2" } }
+    ]
+  },
+  {
+    "email": "user2@example.com",
+    "password": "12345678",
+    "payloads": [
+      { "query": { "id": "3" } },
+      { "query": { "id": "4" } }
+    ]
+  }
 ]
 ```
+
+- 각 VUser는 지정된 계정으로 로그인하며, `payloads` 항목에 따라 테스트 요청을 개별 수행합니다.
+- 계정별 요청 데이터를 명시적으로 분리함으로써 실제 유저 시나리오에 가까운 부하 테스트가 가능합니다.
 
 ---
 
